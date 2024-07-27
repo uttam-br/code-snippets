@@ -17,8 +17,8 @@ public class UserRatingResource {
     public UserRating getUserRating(@PathVariable("userId") String userId) {
         return new UserRating(
                 List.of(
-                        new Rating(userId, "1", 4),
-                        new Rating(userId, "2", 5)
+                        new Rating(userId, "100", 4),
+                        new Rating(userId, "200", 5)
                 ));
     }
 

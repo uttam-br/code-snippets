@@ -1,8 +1,13 @@
 package in.uttamrabari.movie_catalog_service.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Movie {
+    @JsonProperty("id")
     String movieId;
+    @JsonProperty("original_title")
     String movieName;
+    @JsonProperty("overview")
     String movieDescription;
 
     public Movie(String movieId, String name, String description) {

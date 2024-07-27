@@ -1,8 +1,13 @@
 package in.uttamrabari.movie_info_service.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class MovieInfo {
+    @JsonProperty("id")
     String movieId;
+    @JsonProperty("original_title")
     String movieName;
+    @JsonProperty("overview")
     String movieDescription;
 
     public MovieInfo() {
