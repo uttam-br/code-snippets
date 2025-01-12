@@ -10,15 +10,23 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         ExecutorService executorService = Executors.newFixedThreadPool(10);
+
+        Thread thread = new Thread(() -> {
+            System.out.println("Running in thread.");
+        });
+
+        // This will throw ClassCastException at runtime
+        executorService.execute(thread);
+
 //        ExecutorService executorService = Executors.newCachedThreadPool();
 
-        List<Integer> list = List.of(3, 2, 5, 8, 2, 1, 2);
-
-        MergeSorter mergeSorter = new MergeSorter(list, executorService);
-
-        Future<List<Integer>> sortedFuture = executorService.submit(mergeSorter);
-
-        System.out.println(sortedFuture.get());
+//        List<Integer> list = List.of(3, 2, 5, 8, 2, 1, 2);
+//
+//        MergeSorter mergeSorter = new MergeSorter(list, executorService);
+//
+//        Future<List<Integer>> sortedFuture = executorService.submit(mergeSorter);
+//
+//        System.out.println(sortedFuture.get());
 
         executorService.shutdown();
     }
