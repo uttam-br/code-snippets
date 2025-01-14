@@ -1,8 +1,10 @@
-import ui_factory.Platform;
-import ui_factory.UIFactory;
-import ui_factory.UIFactoryFactory;
-import ui_factory.components.Button.Button;
-import ui_factory.components.Text.Text;
+package abstract_factory;
+
+import abstract_factory.ui_factory.Platform;
+import abstract_factory.ui_factory.UIFactory;
+import abstract_factory.ui_factory.UIFactoryFactory;
+import abstract_factory.ui_factory.components.button.Button;
+import abstract_factory.ui_factory.components.text.Text;
 
 public class Client {
 

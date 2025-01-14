@@ -1,7 +1,7 @@
-package ui_factory;
+package abstract_factory.ui_factory;
 
-import ui_factory.components.Button.Button;
-import ui_factory.components.Text.Text;
+import abstract_factory.ui_factory.components.button.Button;
+import abstract_factory.ui_factory.components.text.Text;
 
 public abstract class UIFactory {
 

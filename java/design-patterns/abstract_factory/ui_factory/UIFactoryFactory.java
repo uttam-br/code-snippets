@@ -1,4 +1,4 @@
-package ui_factory;
+package abstract_factory.ui_factory;
 
 public class UIFactoryFactory {
 

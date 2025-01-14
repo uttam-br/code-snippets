@@ -1,4 +1,4 @@
-package ui_factory.components.Text;
+package abstract_factory.ui_factory.components.text;
 
 public class AndroidText implements Text {
 

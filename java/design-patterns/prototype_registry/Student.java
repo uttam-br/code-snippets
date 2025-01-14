@@ -1,3 +1,4 @@
+package prototype_registry;
 
 public class Student implements Prototype<Student> {
 
