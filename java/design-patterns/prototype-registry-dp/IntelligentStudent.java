@@ -4,6 +4,22 @@ public class IntelligentStudent extends Student {
     private int iq;
     private int intelligentScore;
 
+    public int getIq() {
+        return iq;
+    }
+
+    public void setIq(int iq) {
+        this.iq = iq;
+    }
+
+    public int getIntelligentScore() {
+        return intelligentScore;
+    }
+
+    public void setIntelligentScore(int intelligentScore) {
+        this.intelligentScore = intelligentScore;
+    }
+
     IntelligentStudent() {
     }
 
