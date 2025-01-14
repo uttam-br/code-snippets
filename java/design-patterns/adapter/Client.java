@@ -1,20 +1,16 @@
 package adapter;
 
 import adapter.adapters.BankAPI;
-import adapter.adapters.ICICIBankAdapterAPI;
 import adapter.adapters.YesBankAdapaterAPI;
 
 public class Client {
 
+    // just need to change api object.
+    static BankAPI bankAPI = new YesBankAdapaterAPI();
+
     public static void main(String[] args) {
 
-        BankAPI iciciAPI = new ICICIBankAdapterAPI();
-        iciciAPI.getBalance();
-        System.out.println("icici balance " + iciciAPI.getBalance());
-
-        BankAPI yesBankAPI = new YesBankAdapaterAPI();
-        yesBankAPI.getBalance();
-        System.out.println("yes bank balance " + yesBankAPI.getBalance());
+        System.out.println("bank balance " + bankAPI.getBalance());
 
     }
 
