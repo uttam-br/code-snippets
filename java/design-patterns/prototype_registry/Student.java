@@ -59,6 +59,10 @@ public class Student implements Prototype<Student> {
         this.studentPsp = studentPsp;
     }
 
+    public void display() {
+        System.out.println("I am normal student");
+    }
+
     @Override
     public Student copy() {
         return new Student(this);

@@ -23,7 +23,7 @@ public class StudentRegistry {
         student.setBatch("March 2024");
         StudentRegistry.putStudent("March-2024-Normal", student);
 
-        IntelligentStudent intelligentStudent = new IntelligentStudent();
+        Student intelligentStudent = new IntelligentStudent();
         intelligentStudent.setBatch("March-2024");
         StudentRegistry.putStudent("March-2024-Intelligent", intelligentStudent);
     }

@@ -35,4 +35,8 @@ public class IntelligentStudent extends Student {
         return new IntelligentStudent(this);
     }
 
+    public void display() {
+        System.out.println("I am intelligent student");
+    }
+
 }
