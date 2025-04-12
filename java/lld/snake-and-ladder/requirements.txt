@@ -1,0 +1,81 @@
+
+Design Snake and Ladder Game
+============================
+
+Requirements
+------------
+1. Board will have 100 cells. From 0 to 100.
+2. Board will contain snakes. Snake will have starting and ending attributes.
+3. Board will contain ladders. Ladder will have starting and ending attributes.
+4. We can have 2 to 4 players
+5. We will have dice. It will have 6 faces numbered from 1 to 6.
+6. Players can roll the dice and make move on the board.
+7. Players will have turn in round-robin fashion.
+8. Whoever reaches 100th cell first is the winner. Player must get exact value on dice to reach the 100th cell.
+9. Player can eliminate other players if they land on the cell occupid by the other player.
+    Other player will be moved to starting cell.
+10. If cell is safe, then elimination does not apply.
+11.
+
+
+
+Class Design
+------------
+
+1. Board
+    - attributes
+        - cells: List<Cell>
+        - snakes: List<Snake>
+        - ladders: List<Ladder>
+        - players: List<Player>
+        - currentPlayer: Player
+        - moves: List<Move>
+        - winner: Player
+    - methods
+        - startGame(): void
+        - getWinner(): Player
+        - isValidMove(): boolean
+        - makeMove(): void
+
+2. Cell
+    - attributes
+        - row: int
+        - column: int
+        - isSafe: boolean
+        - state: enum(FREE, OCCUPIED)
+    - methods
+        - occupyCell(): void
+
+
+3. Snake
+    - attributes
+        - startCell: Cell
+        - endCell: Cell
+    - methods
+
+
+4. Ladder
+    - attributes
+        - startCell: Cell
+        - endCell: Cell
+
+
+5. Player
+    - attributes
+        - name: String
+        - color: Color
+        - currentPosition: Cell
+    - methods
+        - makeMove(): void
+
+6. Move
+    - attributes
+        - player: Player
+        - fromCell: Cell
+        - toCell: Cell
+    - methods
+        -
+
+7. Dice
+    - methods
+        - roll(): int
