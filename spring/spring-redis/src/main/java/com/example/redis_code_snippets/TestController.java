@@ -14,9 +14,15 @@ public class TestController {
         this.testService = testService;
     }
 
-    @GetMapping(value = "/")
-    public ResponseEntity<?> getTestData() {
-        byte[] testData = testService.getTestData();
+    @GetMapping(value = "/byte-data")
+    public ResponseEntity<?> getByteData() {
+        byte[] byteData = testService.getByteData();
+        return ResponseEntity.ok(byteData);
+    }
+
+    @GetMapping(value = "/string-data")
+    public ResponseEntity<?> getStringData() {
+        TestData testData = testService.getTestData();
         return ResponseEntity.ok(testData);
     }
 

@@ -14,15 +14,34 @@ import java.time.Duration;
 @Configuration
 public class CacheConfig {
 
-    @Bean
-    public CacheManager cacheManager(RedisConnectionFactory redisConnectionFactory) {
-        RedisCacheConfiguration cacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()
-                .entryTtl(Duration.ofMinutes(30))
-                .disableCachingNullValues();
+    public final static String BYTE_DATA = "byteData";
+    public final static String STRING_DATA = "stringData";
 
-        return RedisCacheManager.builder(redisConnectionFactory)
-                .cacheDefaults(cacheConfiguration)
-                .build();
+    public enum CacheConstant {
+        BYTE_DATA(CacheConfig.BYTE_DATA, Duration.ofSeconds(30)),
+        STRING_DATA(CacheConfig.STRING_DATA, Duration.ofSeconds(30));
+
+        private final String value;
+        private final Duration ttl;
+
+        CacheConstant(String value, Duration ttl) {
+            this.value = value;
+            this.ttl = ttl;
+        }
+    }
+
+    @Bean
+    public CacheManager customCacheManager(RedisConnectionFactory redisConnectionFactory) {
+        RedisCacheManager.RedisCacheManagerBuilder redisCacheManagerBuilder =
+                RedisCacheManager.builder(redisConnectionFactory);
+
+        for (CacheConstant cacheConstant: CacheConstant.values()) {
+            RedisCacheConfiguration redisCacheConfiguration = RedisCacheConfiguration.defaultCacheConfig();
+            redisCacheManagerBuilder.withCacheConfiguration(cacheConstant.value,
+                    redisCacheConfiguration.entryTtl(cacheConstant.ttl));
+        }
+
+        return redisCacheManagerBuilder.build();
     }
 
 }
