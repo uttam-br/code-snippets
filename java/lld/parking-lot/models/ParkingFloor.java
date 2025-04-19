@@ -1,29 +1,26 @@
 package models;
 
-import models.enums.ParkingSpotType;
-
 import java.util.List;
-import java.util.Map;
 
 public class ParkingFloor {
 
-    private int floorNumber;
+    private int floor;
+    private List<ParkingSpot> parkingSpots;
 
-    private Map<ParkingSpotType, List<ParkingSpot>> parkingSpots;
-
-    public int getFloorNumber() {
-        return floorNumber;
+    public int getFloor() {
+        return floor;
     }
 
-    public void setFloorNumber(int floorNumber) {
-        this.floorNumber = floorNumber;
+    public void setFloor(int floor) {
+        this.floor = floor;
     }
 
-    public Map<ParkingSpotType, List<ParkingSpot>> getParkingSpots() {
+    public List<ParkingSpot> getParkingSpots() {
         return parkingSpots;
     }
 
-    public void setParkingSpots(Map<ParkingSpotType, List<ParkingSpot>> parkingSpots) {
+    public void setParkingSpots(List<ParkingSpot> parkingSpots) {
         this.parkingSpots = parkingSpots;
     }
+
 }

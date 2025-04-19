@@ -1,19 +1,28 @@
 package models;
 
-import models.enums.ParkingSpotType;
+import models.constants.ParkingSpotType;
 
 public class ParkingSpot {
 
-    private ParkingSpotType type;
+    private int parkingSpotNumber;
+    private ParkingSpotType parkingSpotType;
     private boolean occupied;
-    private ParkingFloor parkingFloor;
+    private Vehicle vehicle;
 
-    public ParkingSpotType getType() {
-        return type;
+    public int getParkingSpotNumber() {
+        return parkingSpotNumber;
     }
 
-    public void setType(ParkingSpotType type) {
-        this.type = type;
+    public void setParkingSpotNumber(int parkingSpotNumber) {
+        this.parkingSpotNumber = parkingSpotNumber;
+    }
+
+    public ParkingSpotType getParkingSpotType() {
+        return parkingSpotType;
+    }
+
+    public void setParkingSpotType(ParkingSpotType parkingSpotType) {
+        this.parkingSpotType = parkingSpotType;
     }
 
     public boolean isOccupied() {
@@ -24,11 +33,11 @@ public class ParkingSpot {
         this.occupied = occupied;
     }
 
-    public ParkingFloor getParkingFloor() {
-        return parkingFloor;
+    public Vehicle getVehicle() {
+        return vehicle;
     }
 
-    public void setParkingFloor(ParkingFloor parkingFloor) {
-        this.parkingFloor = parkingFloor;
+    public void setVehicle(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 }

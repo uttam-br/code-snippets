@@ -1,12 +1,24 @@
 package models;
 
-import models.enums.PaymentStatus;
-
 import java.util.List;
 
 public class Payment {
+    List<PaymentMethod> paymentMethods;
+    boolean success;
 
-    private List<PaymentMethod> paymentMethods;
-    private PaymentStatus status;
+    public List<PaymentMethod> getPaymentMethods() {
+        return paymentMethods;
+    }
 
+    public void setPaymentMethods(List<PaymentMethod> paymentMethods) {
+        this.paymentMethods = paymentMethods;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
 }

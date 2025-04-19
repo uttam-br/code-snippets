@@ -1,14 +1,22 @@
 package models;
 
-import models.enums.ParkingGateType;
+import models.constants.ParkingGateType;
 
 import java.util.List;
 
 public class ParkingGate {
 
-    private List<Operator> operators;
-    private ParkingGateType type;
+    private String gateName;
+    List<Operator> operators;
+    private ParkingGateType parkingGateType;
 
+    public String getGateName() {
+        return gateName;
+    }
+
+    public void setGateName(String gateName) {
+        this.gateName = gateName;
+    }
 
     public List<Operator> getOperators() {
         return operators;
@@ -18,11 +26,11 @@ public class ParkingGate {
         this.operators = operators;
     }
 
-    public ParkingGateType getType() {
-        return type;
+    public ParkingGateType getParkingGateType() {
+        return parkingGateType;
     }
 
-    public void setType(ParkingGateType type) {
-        this.type = type;
+    public void setParkingGateType(ParkingGateType parkingGateType) {
+        this.parkingGateType = parkingGateType;
     }
 }

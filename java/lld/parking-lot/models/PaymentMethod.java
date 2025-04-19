@@ -1,20 +1,12 @@
 package models;
 
-import models.enums.PaymentMethodType;
+import models.constants.PaymentMethodType;
 
 public class PaymentMethod {
 
-    private double amount;
     private String referenceId;
+    private double amount;
     private PaymentMethodType paymentMethodType;
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
 
     public String getReferenceId() {
         return referenceId;
@@ -22,6 +14,14 @@ public class PaymentMethod {
 
     public void setReferenceId(String referenceId) {
         this.referenceId = referenceId;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     public PaymentMethodType getPaymentMethodType() {

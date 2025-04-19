@@ -1,4 +1,4 @@
-package models.enums;
+package models.constants;
 
 public enum ParkingSpotType {
     SMALL,
