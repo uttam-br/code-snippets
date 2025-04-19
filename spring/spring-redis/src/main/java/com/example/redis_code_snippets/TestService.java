@@ -8,13 +8,23 @@ import java.io.ByteArrayInputStream;
 @Service
 public class TestService {
 
-    @Cacheable(value = "testdata", cacheManager = "cacheManager")
-    public byte[] getTestData() {
+    @Cacheable(value = CacheConfig.BYTE_DATA, cacheManager = "customCacheManager", unless = "#result == null")
+    public byte[] getByteData() {
         try {
             Thread.sleep(3000); // sleep for 3 seconds
-//            return new TestData("Uttam", "Rabari");
-            byte[] bytes = new byte[]{0, 0, 0, 0};
-            return bytes;
+            return new byte[]{0, 0, 0, 0};
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    @Cacheable(value = CacheConfig.STRING_DATA, cacheManager = "customCacheManager", unless = "#result == null")
+    public TestData getTestData() {
+        try {
+            Thread.sleep(3000);
+            return new TestData("test", "data");
         } catch (Exception e) {
             e.printStackTrace();
         }
