@@ -1,5 +1,5 @@
 {
-  "project-name": "UI-1",
+  "project-name": "UI- 4",
   "project-type": "npm",
   "repo-url": "https://github.com/nutanix-saas-engineering/sizer-app.git",
   "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
