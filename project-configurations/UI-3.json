@@ -1,6 +1,7 @@
 {
   "project-name": "UI-3",
   "project-type": "npm",
+  "status": "active",
   "repo-url": "https://github.com/nutanix-saas-engineering/sizer-app.git",
   "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
   "environment-variables": {
@@ -52,6 +53,5 @@
     "exclude-dir": []
   },
   "email-recipients": "parvinder.singh@nutanix.com,uttam.agarwal@nutanix.com,sparsh.akhauri@nutanix.com",
-  "id": "ui-3",
-  "status": "inactive"
+  "id": "ui-3"
 }
