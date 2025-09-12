@@ -1,7 +1,7 @@
 {
-  "project_name": "Front End 01",
-  "project_type": "npm",
-  "status": "inactive",
+  "project_name": "Front End 1",
+  "project_type": "maven",
+  "status": "active",
   "repo-url": "https://github.com/nutanix-saas-engineering/sizer-app.git",
   "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
   "environment-variables": {
