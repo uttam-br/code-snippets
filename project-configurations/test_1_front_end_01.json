@@ -1,7 +1,7 @@
 {
-  "project_name": "Front End 1",
-  "project_type": "maven",
-  "status": "inactive",
+  "project_name": "Front End 01",
+  "project_type": "npm",
+  "status": "active",
   "repo-url": "https://github.com/nutanix-saas-engineering/sizer-app.git",
   "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
   "environment-variables": {
@@ -56,6 +56,6 @@
   "app_id": "test_1",
   "id": "front_end_01",
   "created_by": "uttamrabari@nutanix.com",
-  "created_at": "2025-09-12T09:27:57.744Z",
+  "created_at": "2025-09-14T13:13:14.870Z",
   "schedule": []
 }
