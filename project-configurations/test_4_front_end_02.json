@@ -55,7 +55,7 @@
   "email-recipients": "parvinder.singh@nutanix.com,uttam.agarwal@nutanix.com,sparsh.akhauri@nutanix.com",
   "schedules": [
     {
-      "duration": "hourly",
+      "duration": "weekly",
       "level": "high",
       "branch": "test-branch"
     }
@@ -65,6 +65,6 @@
   "created_by": "uttamrabari@nutanix.com",
   "created_at": "2025-09-14T14:38:08.926Z",
   "schedule": [
-    "31 * * * * %ProjectName=Front End 02;Module=npm;Level=High;Branch=test-branch;Trigger_BlackDuck=yes;Create_PR=true;detectVersion=detect8;"
+    "31 0 * * 0 %ProjectName=Front End 02;Module=npm;Level=High;Branch=test-branch;Trigger_BlackDuck=yes;Create_PR=true;detectVersion=detect8;"
   ]
 }
