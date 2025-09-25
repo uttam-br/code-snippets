@@ -1,0 +1,68 @@
+{
+  "repo-url": "test repo url.git",
+  "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
+  "detect-script-version": "test detect script version",
+  "status": "active",
+  "environment-variables": {
+    "BLACKDUCK_DETECT_URL": "it-sec-drt-blackduck-url"
+  },
+  "credentials-variables": {
+    "file-parameters": {
+      "maven-settings-xml": "SETTINGS_XML"
+    },
+    "string-parameters": {
+      "devops-blackduck-automation-token": "API_TOKEN",
+      "it-sec-drt-blackduck-url": "DETECT_URL"
+    }
+  },
+  "module-config": {
+    "maven": {
+      "pom-dir": "maven_pom_directory",
+      "additional-maven-install-options": "install_options",
+      "additional-maven-compile-options": "compile_options",
+      "min-java-version": {
+        "major-version": "212",
+        "jdk-version": "21"
+      }
+    }
+  },
+  "git-config": {
+    "pull-requests-url": "test repo url/pulls",
+    "branch-prefix": "branch-prefix"
+  },
+  "packages-config": {
+    "exclude-versions": {
+      "exclude-lib": [
+        "version1",
+        "version2"
+      ]
+    },
+    "exclude-groups": [
+      "exclude-groups1",
+      "exclude-groups2"
+    ],
+    "exclude-dir": [
+      "exclude-dir",
+      "exclude-dir2"
+    ]
+  },
+  "email-recipients": "email@email.com,email2@email.com",
+  "jira-config": {
+    "auto-create-tickets": true,
+    "assignee-name": "jira-username,jira-username2",
+    "auto-create-tickets-for-failure": true,
+    "auto-create-tickets-for-skipped": true
+  },
+  "javaVersion": "21",
+  "mavenVersion": "21",
+  "id": "test_maven_project_01",
+  "created_by": "uttamrabari@nutanix.com",
+  "created_at": "2025-09-25T09:06:00.335Z",
+  "schedule": [
+    "31 0 * * 0 %ProjectName=test maven project 01;Module=maven;Level=Critical;Branch=main;Trigger_BlackDuck=yes;Create_PR=true;",
+    "32 0 * * 0 %ProjectName=test maven project 01;Module=maven;Level=Low;Branch=main;Trigger_BlackDuck=yes;Create_PR=true;"
+  ],
+  "app-id": "test_1",
+  "project-name": "test maven project 01",
+  "project-type": "maven"
+}
