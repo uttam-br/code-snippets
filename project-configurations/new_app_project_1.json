@@ -1,0 +1,65 @@
+{
+  "repo-url": "https://github.com/nutanix-saas-engineering/sizer-app.git",
+  "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
+  "detect-script-version": null,
+  "status": "inactive",
+  "environment-variables": {
+    "BLACKDUCK_DETECT_URL": "it-sec-drt-blackduck-url",
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "NPM_TOKEN": "autofix-npm-token"
+  },
+  "credentials-variables": {
+    "file-parameters": {
+      "maven-settings-xml": "SETTINGS_XML"
+    },
+    "string-parameters": {
+      "devops-blackduck-automation-token": "API_TOKEN",
+      "it-sec-drt-blackduck-url": "DETECT_URL",
+      "autofix-npm-token": "NPM_TOKEN"
+    }
+  },
+  "module-config": {
+    "maven": {
+      "pom-dir": "sizer",
+      "min-java-version": {
+        "major-version": "21"
+      },
+      "javaVersion": null,
+      "mavenVersion": null
+    }
+  },
+  "git-config": {
+    "app-repo-url": null,
+    "pull-requests-url": null,
+    "branch-prefix": "test-1"
+  },
+  "packages-config": {
+    "exclude-versions": {
+      "exclude-lib": [
+        "1"
+      ]
+    },
+    "exclude-groups": [
+      "exclude-group"
+    ],
+    "exclude-dir": [
+      "exclude-dir"
+    ]
+  },
+  "email-recipients": "receiveremail@email.com",
+  "jira-config": {
+    "auto-create-tickets": true,
+    "assignee-name": "jira-username",
+    "auto-create-tickets-for-failure": true,
+    "auto-create-tickets-for-skipped": true
+  },
+  "id": "project_1",
+  "created_by": "uttamrabari@nutanix.com",
+  "created_at": "2025-09-24T07:26:27.107Z",
+  "schedule": [
+    "31 0 * * 0 %ProjectName=Project 1;Module=maven;Level=Critical;Branch=main;Trigger_BlackDuck=yes;Create_PR=true;"
+  ],
+  "app-id": "new_app",
+  "project-name": "Project 1",
+  "project-type": "maven"
+}
