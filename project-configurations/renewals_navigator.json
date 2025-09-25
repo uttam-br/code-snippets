@@ -2,7 +2,7 @@
   "repo-url": "https://github.com/nutanix-saas-engineering/navigator",
   "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
   "detect-script-version": null,
-  "status": "active",
+  "status": "inactive",
   "environment-variables": {
     "BLACKDUCK_DETECT_URL": "it-sec-drt-blackduck-url",
     "NODE_OPTIONS": "--max-old-space-size=4096",
