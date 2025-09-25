@@ -2,7 +2,7 @@
   "repo-url": "https://github.com/nutanix-saas-engineering/renewals.git",
   "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
   "detect-script-version": "Detect9",
-  "status": "active",
+  "status": "draft",
   "environment-variables": {
     "BLACKDUCK_DETECT_URL": "it-sec-drt-blackduck-url",
     "ARTIFACTORY_TOKEN": "canaveral-artifactory-svc-saas-token"
@@ -55,6 +55,7 @@
   "schedule": [
     "31 0 * * 0 %ProjectName=renewal-navigator;Module=maven;Level=Critical;Branch=main;Trigger_BlackDuck=yes;Create_PR=true;"
   ],
+  "project_id": "renewal-navigator",
   "app-id": "renewals",
   "project-name": "renewal-navigator",
   "project-type": "maven"
