@@ -1,0 +1,11 @@
+package com.example.drools8.rules;
+
+import com.example.drools8.model.Product;
+
+rule "Give discount for electronics"
+    when
+        $p: Product(category == "electronics", price > 1000)
+    then
+        $p.setDiscount(10);
+        System.out.println("Applied 10% discount to " + $p.getName());
+end
