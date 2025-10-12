@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="rulesKBase" packages="rules"
+           default="false" eventProcessingMode="cloud"
+           equalsBehavior="identity">
+        <!-- This is a minimal kmodule.xml. Ref Drools documentation, see http://docs.jboss.org/drools/release/latest/drools-docs/html_single/index.html#_creatingandbuildingakieproject -->
+        <ksession name="rulesKSession" default="true"/>
+    </kbase>
+</kmodule>
