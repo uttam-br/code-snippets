@@ -1,0 +1,70 @@
+{
+  "repo-url": "https://github.com/nutanix-saas-engineering/renewals.git",
+  "blackduck-detect-additional-params": "--logging.level.com.synopsys.integration=DEBUG --detect.maven.excluded.scopes=test --detect.timeout=10000  --detect.cleanup=false",
+  "detect-script-version": "Detect9",
+  "status": "draft",
+  "environment-variables": {
+    "BLACKDUCK_DETECT_URL": "it-sec-drt-blackduck-url",
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "NPM_TOKEN": "autofix-npm-token"
+  },
+  "credentials-variables": {
+    "string-parameters": {
+      "devops-blackduck-automation-token": "API_TOKEN",
+      "it-sec-drt-blackduck-url": "DETECT_URL",
+      "autofix-npm-token": "NPM_TOKEN"
+    },
+    "file-parameters": {
+      "maven-settings-xml": "SETTINGS_XML"
+    }
+  },
+  "module-config": {
+    "npm": {
+      "npmDir": "renewals",
+      "npmrc_id": "renewals-npmrc-20",
+      "npm-token": null,
+      "shouldDownloadCerts": false,
+      "isWithNpm": true,
+      "npm-install-command": "npm install",
+      "npm-pre-command": "npm config",
+      "npm-run-command": "npm run unit-test",
+      "npm-final-command": "npm install --force"
+    }
+  },
+  "git-config": {
+    "app-repo-url": "github.com/nutanix-saas-engineering/renewals.git",
+    "pull-requests-url": "https://github.com/nutanix-saas-engineering/renewals/pulls",
+    "branch-prefix": "autofix"
+  },
+  "packages-config": {
+    "exclude-versions": {
+      "sails": [
+        "1.0",
+        "1.2"
+      ]
+    },
+    "exclude-groups": null,
+    "exclude-dir": [
+      "tests"
+    ]
+  },
+  "email-recipients": "parth.gedia@nutanix.com",
+  "slack-webhook": "https://hooks/slack.com",
+  "jira-config": {
+    "auto-create-tickets": true,
+    "assignee-name": "parth.gedia",
+    "auto-create-tickets-for-failure": true,
+    "auto-create-tickets-for-skipped": true
+  },
+  "project_id": "renewals",
+  "id": "renewals",
+  "created_by": "parth.gedia@nutanix.com",
+  "created_at": "2025-10-16T05:31:43.854Z",
+  "schedule": [
+    "31 0 * * 0 %ProjectName=renewals_renewals;Module=npm;Level=Critical;Branch=main;Trigger_BlackDuck=yes;Create_PR=true;detectVersion=detect8;"
+  ],
+  "jenkins_job_id": "renewals_renewals",
+  "app-id": "renewals",
+  "project-name": "renewals",
+  "project-type": "npm"
+}
