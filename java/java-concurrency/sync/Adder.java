@@ -1,5 +1,3 @@
-package sync;
-
 import java.util.concurrent.locks.Lock;
 
 public class Adder implements Runnable {
@@ -15,10 +13,10 @@ public class Adder implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 100000; i++) {
-//            lock.lock();
+            lock.lock();
             System.out.println("Adder " + Thread.currentThread().getName());
             this.count.increment();
-//            lock.unlock();
+            lock.unlock();
         }
     }
 }

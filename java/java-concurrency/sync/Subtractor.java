@@ -1,5 +1,3 @@
-package sync;
-
 import java.util.concurrent.locks.Lock;
 
 public class Subtractor implements Runnable {

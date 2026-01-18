@@ -1,5 +1,3 @@
-package sync;
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Count {
