@@ -1,0 +1,49 @@
+
+Functional Requirements :-
+- customer should be able to park vehicles
+- customer should be able to unpark vehicles
+- parking lot can contain multiple floors
+- each floor contains multiple spots
+- spot can be of different types
+- parking lot can have multiple entry and exit gates
+- at entry gate, parking ticket is assigned when vehicle enters the parking lot
+- at exit gate, invoice takes place based on the parking ticket
+- parking ticket contains, vehicle number, parking start time, end time, parking floor, parking spot, cost
+- parking cost can be based on multiple strategies (hourly, daily, weekly)
+- Customer can pay using CC, UPI or cash.
+
+
+Non-Functional Requirements :-
+- Extensible
+    - adding new type of parking spot
+    - adding new type of pricing model
+    - adding new floor, entry, exit gates
+- Performant
+    - assigning parking spot should be fast.
+- Concurrency
+    - No more than one vehicle should be assigned same parking spot
+- Design Patterns
+    - Strategy design pattern for pricing
+    - Singleton for Parking Lot
+    - Strategy pattern for parking cars (assigning spots)
+    - Factory design pattern for spots
+
+
+Entities & Relationship
+- Parking Lot
+- Parking Floor
+- Parking Spot
+- Entry Gate
+- Exit Gate
+- Vehicle
+- Parking Ticket
+- Parking Invoice
+- Payment Method
+- Payment Status
+
+
+Class Diagram
+
+
+
+Implementation

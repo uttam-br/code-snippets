@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: adoptions
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgresml
+    username: myappuser
+    password: mypassword
+  ai:
+    postgresml: 
+      embedding: 
+        create-extention: true
+        options:
+          vector-type: pg_vector
+    vectorstore:
+      pgvector:
+        dimensions: 768
+        initialize-schema: true
+    chat:
+      memory:
+        repository:
+          jdbc:
+            initialize-schema: always
