@@ -1,0 +1,42 @@
+
+# Requirements
+- Parking lot can have multiple floors
+- Each floor can different layout (different number of spots)
+- Parking lot has spots for  multiple Vehicle types
+- Parking lot has multiple entry and exit gates.
+- Parking lot can show available parking spots at each floor.
+- Vehicle can enter from one of the entry gates.
+- Parking ticket (along with parking spot) is issued.
+- Invoice is issued at the exit gate using the parking ticket.
+
+
+# Entities
+- Parking Lot 
+- Parking Floor
+- Parking Spot
+- Vehicle
+- Entry Gate, Exit Gate
+- Parking Ticket
+- Invoice
+
+
+# Relationship among entities
+- Parking lot can have multiple parking floors (1:M)
+- Parking lot can have multiple entry and exit gates (1:M)
+- Parking Floor can have multiple parking spot (1:M)
+- Parking Spot can have at max one vehicle (1:1) (weak relationship)
+- Parking Ticket to Vehicle (1:1)
+- Parking Ticket to Invoice (1:1)
+
+
+# Design Patterns
+- Strategy design pattern for allocating the parking spot.
+- Strategy design pattern for calculating the cost of parking.
+- Factory design pattern for parking spots.
+- Singleton design pattern for parking lot.
+
+
+# Working Code
+- models with necessary attributes and methods
+- management layer
+- middle layer
